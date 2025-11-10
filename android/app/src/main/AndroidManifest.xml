@@ -42,7 +42,7 @@
     </queries>
 
     <application
-        android:label="Dhahar Restaurant"
+        android:label="MITRO"
         android:name="${applicationName}"
         android:extractNativeLibs="true"
         android:requestLegacyExternalStorage="true"

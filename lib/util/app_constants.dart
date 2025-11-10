@@ -2,8 +2,8 @@ import 'package:dhahar_lib_restaurant/features/language/domain/models/language_m
 import 'package:dhahar_lib_restaurant/util/images.dart';
 
 class AppConstants {
-  static const String appName = 'Dhahar Restaurant';
-  static const double appVersion = 8.4; ///Flutter SDK: 3.35.2
+  static const String appName = 'MITRO';
+  static const double appVersion = 1.0; ///Flutter SDK: 3.35.2
 
   static const String baseUrl = 'https://admin-dhahar.umkm.pro';
   static const String configUri = '/api/v1/config';
