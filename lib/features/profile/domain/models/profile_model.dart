@@ -705,6 +705,14 @@ class Subscription {
     this.package,
   });
 
+  // helper
+  int? _toInt(dynamic value) {
+    if (value == null) return null;
+    if (value is int) return value;
+    if (value is String) return int.tryParse(value);
+    return null;
+  }
+
   Subscription.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     packageId = json['package_id'];
@@ -712,20 +720,20 @@ class Subscription {
     expiryDate = json['expiry_date'];
     maxOrder = json['max_order'];
     maxProduct = json['max_product'];
-    pos = json['pos'] ?? 0;
-    mobileApp = json['mobile_app'] ?? 0;
-    chat = json['chat'] ?? 0;
-    review = json['review'] ?? 0;
+    pos = _toInt(json['pos']);
+    mobileApp = _toInt(json['mobile_app']);
+    chat = _toInt(json['chat']);
+    review = _toInt(json['review']);
     selfDelivery = json['self_delivery'];
     status = json['status'];
-    isTrial = json['is_trial'];
+    isTrial = _toInt(json['is_trial']);
     totalPackageRenewed = json['total_package_renewed'];
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
     renewedAt = json['renewed_at'];
-    isCanceled = json['is_canceled'];
+    isCanceled = _toInt(json['is_canceled']);
     canceledBy = json['canceled_by'];
-    validity = json['validity'];
+    validity = _toInt(json['validity']);
     package = json['package'] != null ? Package.fromJson(json['package']) : null;
   }
 
